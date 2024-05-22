@@ -4,7 +4,7 @@
     "es2021": true,
     "jest/globals": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:react-hooks/recommended",  "plugin:jest/recommended"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:react-hooks/recommended", "plugin:jest/recommended"],
   "parserOptions": {
     "ecmaVersion": 12,
     "sourceType": "module",
@@ -13,11 +13,18 @@
     }
   },
   "plugins": ["react", "react-hooks","jest"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
     //add customize rules here as per your project's needs
     "no-unused-vars":"error",
     "no-undef":"error",
     "indent":["error",2],
     "quotes":["error","single"],
-    "jest/valid-expect": "error"}
+    "jest/valid-expect": "error",
+    "jest/valid-title": "error"
+  }
 }  
