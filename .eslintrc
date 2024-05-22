@@ -18,6 +18,5 @@
     "no-undef":"error",
     "indent":["error",2],
     "quotes":["error","single"],
-    "jest/valid-expect":true
-  }
+    "jest/valid-expect": "error"}
 }  
