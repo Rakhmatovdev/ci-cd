@@ -2,22 +2,22 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  init:
+  example_matrix:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [17.x]
+        node-version: [17.x, 18.x, 19.x, 20.x, 21.x]
     steps:
       - uses: actions/checkout@v3
-      - name: Staring Node.js ${{ matrix.node-version }}
+      - name: Starting Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-          node-version:${{ matrix.node-version }}
-      - name: install modules
+          node-version: ${{ matrix.node-version }}
+      - name: Install modules
         run: npm install
-      - name: build project
+      - name: Build project
         run: npm run build
-      - name: unit test
+      - name: Unit test
         run: npm run test:unit 
-      - name: lint code
+      - name: Lint code
         run: npm run lint
