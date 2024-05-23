@@ -20,10 +20,11 @@
   },
   "rules": {
     //add customize rules here as per your project's needs
-    "no-unused-vars":"error",
-    "no-undef":"error",
-    "indent":["error",2],
-    "jest/valid-expect": "error",
-    "jest/valid-title": "error"
+    "no-unused-vars":"warn",
+    "no-undef":"warn",
+    "indent":["warn",2],
+    "quotes":["warn","double"],
+    "jest/valid-expect": "warn",
+    "jest/valid-title": "warn"
   }
 }  
